@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg navbar-dark " style="background-color: var(--primary-color); ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">LibSysApp</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="home" routerLinkActive="active-link"
+             [routerLinkActiveOptions]="{exact:true}">Home</a>
+        </li>
+        <li class="nav-item ml-3">
+          <a routerLink="/viewBooks" class="nav-link active" routerLinkActive="active-link">View Books</a>
+        </li>
+        <li class="nav-item ml-3">
+          <div class="dropdown show">
+            <a style="  background-color: var(--primary-color); border-color: var(--primary-color); padding-top: 7px;   font-weight:500;  font-size:large;
+            "
+               class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" data-bs-toggle="dropdown" aria-expanded="false">
+
+              Controls
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" routerLink="/add-book" routerLinkActive="active-link">
+                Add New
+                Book
+              </a>
+              <a class="dropdown-item" routerLink="/update-book" routerLinkActive="active-link">
+                Update
+                Books
+              </a>
+              <a class="dropdown-item" routerLink="/update-author" routerLinkActive="active-link">
+                Edit
+                Author details
+              </a>
+              <a class="dropdown-item" routerLink="/add-author" routerLinkActive="active-link">
+                Add New
+                Author
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item ml-3">
+          <a routerLink="/feedback" class="nav-link active" routerLinkActive="active-link">Feedback</a>
+        </li>
+        <li class="nav-item ml-3">
+          <a routerLink="/login" class="nav-link active" routerLinkActive="active-link">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

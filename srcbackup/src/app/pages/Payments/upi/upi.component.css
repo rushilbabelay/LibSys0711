@@ -1,0 +1,56 @@
+/* .backbutton{
+    height: 100%;
+    width: 80%;
+} */
+
+.padding {
+    padding: 1rem !important;
+}
+.name{
+    margin: 15px;
+    text-align: left;
+}
+.list-group-item,
+.bankitems
+{
+   font-size: 24px;
+   /* color: black; */
+   padding: 10px;
+}
+.backButton{
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
+.name{
+    font-size: 20px;
+    padding-left: 12px;
+}
+.space{
+    padding-left: 24px;
+    padding-top: 10px;
+}
+.btn-theme {
+    
+    height: 35px;
+    /* padding-bottom: 30px; */
+    margin-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 0px;
+    width: 100px;
+    font-size: 18px;
+}
+.ph{
+    height: 30px;
+    font-size: 15px;
+}
+.affets:focus {
+    box-shadow: 10px 0px 0px 0px skyblue!important;
+    /* border-color: rgba(149,179,215,1); */
+    border-color: rgb(17, 208, 241);
+
+}
+.radio{
+   height:20px;
+   width: 20px;
+   /* padding-top: 30px; */
+}

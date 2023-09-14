@@ -1,0 +1,80 @@
+<app-admin-layout></app-admin-layout>
+
+<br>
+<h1 class="text-center">Edit Author Details</h1>
+<div class="table">
+  <tbody class="tbody">
+    <tr align="left">
+      <th>Author Id</th>
+      <th>Name</th>
+
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let author of authors">
+      <td> {{author.authorId}} </td>
+      <td align="left"> {{author.authorName}} </td>
+
+      <td>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="updateauthors(author)"> Edit</button>
+        <!--  <td> <button type="button" class="btn btn-danger" (click)="deleteBooks(book)">Delete</button></td>-->
+        &nbsp;
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
+      </td>
+
+    </tr>
+  </tbody>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Update Author </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-grp">
+            <label for="Authorid"> Author Id</label>
+            <br>
+            <input type="number" #authorId [(ngModel)]="authorToUpdate.authorId" name="AuthorId" id="authorId" class="form-control"><br>
+
+            <label for="AuthorName"> Name</label>
+            <br>
+            <input type="text" #authorName [(ngModel)]="authorToUpdate.authorName" name="AuthorName" id="AuthorName" class="form-control"><br>
+
+
+
+
+          </div>
+          <pre></pre>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal"  style="margin-bottom: 14px; padding-left: 15px; padding-top: 4px;">Close</button>
+          &nbsp;
+          <button type="button" class="btn btn-theme">Save changes</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!--deleteModal-->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Author</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete the selected author?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"  style="margin-bottom: 14px; padding-left: 15px; padding-top: 4px;">Close</button>
+        <button type="button" class="btn btn-theme">Yes, Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+

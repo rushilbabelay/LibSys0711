@@ -1,0 +1,14 @@
+footer{
+    position: sticky;
+    top: 100%;
+   overflow: hidden;
+    background-color:var(--navbar-footer-color);
+    padding: 20px 10px;}
+.container{
+    color:var(--primary-color);
+   
+}
+.site-logo{
+   
+    font-size: 1.2em;
+}

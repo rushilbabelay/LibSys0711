@@ -1,0 +1,89 @@
+<div *ngIf="commonLayout">
+    <app-common-layout></app-common-layout>
+  </div>
+  <div *ngIf="adminLayout">
+    <app-admin-layout></app-admin-layout>
+  </div>
+<div class="row">
+    <div class="col-md-1 mt-4 offset-3 text-center">
+        <button routerLink="/types-of-payments" class="btn backButton">Back</button>
+    </div>
+</div>
+<div class="row name">
+    <div class="col-md-8 offset-2">
+        <div class="padding padding_boder">
+            <div class="container ">
+                <div class="options">
+                    <div class="row ">
+                        <div class="col-md-7 offset-2">
+                            <input class="radio" type="radio" formControlName="rating" name="rating" value="A" />
+                            <label class="name">Paytm</label>
+                        </div>
+                        <div class="col-md-3 mt-0">
+                            <!-- <img src="https://www.bing.com/images/search?view=detailV2&ccid=eZvb56xj&id=557577AF6F701971848DC0335597442ECC90FBC7&thid=OIP.eZvb56xjmEhYl5WUTFM4BwHaCO&mediaurl=https%3a%2f%2fpaynormgateway.commdel.com%2fAssets%2fPaymentAssets%2fimages%2fupi-icon-black.png&exph=189&expw=629&q=upi+payment+icon&simid=608042759714246804&FORM=IRPRST&ck=B33A6BCE7491FFAEF7B6BE4D1AA21A5A&selectedIndex=11" alt=""> -->
+                            <img class="img-responsive" src="assets\libSys-images\PAYTM.png" alt="PAYTM" width="80"
+                                height="40">
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-md-7 offset-2">
+                            <input class="radio" type="radio" formControlName="rating" name="rating" value="B" />
+                            <label class="name">Google Pay</label>
+                        </div>
+                        <div class="col-md-3 mt-0">
+                            <!-- <img src="https://www.bing.com/images/search?view=detailV2&ccid=eZvb56xj&id=557577AF6F701971848DC0335597442ECC90FBC7&thid=OIP.eZvb56xjmEhYl5WUTFM4BwHaCO&mediaurl=https%3a%2f%2fpaynormgateway.commdel.com%2fAssets%2fPaymentAssets%2fimages%2fupi-icon-black.png&exph=189&expw=629&q=upi+payment+icon&simid=608042759714246804&FORM=IRPRST&ck=B33A6BCE7491FFAEF7B6BE4D1AA21A5A&selectedIndex=11" alt=""> -->
+                            <img class="img-responsive" src="assets\libSys-images\GOOGLEPAY.png" alt="GOOGLEPAY"
+                                width="80" height="40">
+                        </div>
+                    </div>
+                    <div class="row  ">
+                        <div class="col-md-7 offset-2">
+                            <input class="radio" type="radio" formControlName="rating" name="rating" value="C" />
+                            <label class="name">PhonePe</label>
+                        </div>
+                        <div class="col-md-3 mt-0">
+                            <!-- <img src="https://www.bing.com/images/search?view=detailV2&ccid=eZvb56xj&id=557577AF6F701971848DC0335597442ECC90FBC7&thid=OIP.eZvb56xjmEhYl5WUTFM4BwHaCO&mediaurl=https%3a%2f%2fpaynormgateway.commdel.com%2fAssets%2fPaymentAssets%2fimages%2fupi-icon-black.png&exph=189&expw=629&q=upi+payment+icon&simid=608042759714246804&FORM=IRPRST&ck=B33A6BCE7491FFAEF7B6BE4D1AA21A5A&selectedIndex=11" alt=""> -->
+                            <img class="img-responsive" src="assets\libSys-images\PHONEPE.jpg" alt="PHONEPE" width="80"
+                                height="40">
+                        </div>
+                    </div>
+                    <div class="row  ">
+                        <div class="col-md-7 offset-2">
+                            <input class="radio" type="radio" formControlName="rating" name="rating" value="D" />
+                            <label class="name">Airtel</label>
+                        </div>
+                        <div class="col-md-3 mt-0">
+                            <!-- <img src="https://www.bing.com/images/search?view=detailV2&ccid=eZvb56xj&id=557577AF6F701971848DC0335597442ECC90FBC7&thid=OIP.eZvb56xjmEhYl5WUTFM4BwHaCO&mediaurl=https%3a%2f%2fpaynormgateway.commdel.com%2fAssets%2fPaymentAssets%2fimages%2fupi-icon-black.png&exph=189&expw=629&q=upi+payment+icon&simid=608042759714246804&FORM=IRPRST&ck=B33A6BCE7491FFAEF7B6BE4D1AA21A5A&selectedIndex=11" alt=""> -->
+                            <img class="img-responsive" src="assets\libSys-images\AIRTLE.png" alt="AIRTLE" width="80"
+                                height="40">
+                        </div>
+                    </div>
+                    <div class="row  ">
+                        <div class="col-md-7 offset-2">
+                            <input class="radio" type="radio" formControlName="rating" name="rating" value="E" />
+                            <label class="name">BHIM UPI</label>
+                        </div>
+                        <div class="col-md-3 mt-0">
+                            <!-- <img src="https://www.bing.com/images/search?view=detailV2&ccid=eZvb56xj&id=557577AF6F701971848DC0335597442ECC90FBC7&thid=OIP.eZvb56xjmEhYl5WUTFM4BwHaCO&mediaurl=https%3a%2f%2fpaynormgateway.commdel.com%2fAssets%2fPaymentAssets%2fimages%2fupi-icon-black.png&exph=189&expw=629&q=upi+payment+icon&simid=608042759714246804&FORM=IRPRST&ck=B33A6BCE7491FFAEF7B6BE4D1AA21A5A&selectedIndex=11" alt=""> -->
+                            <img class="img-responsive" src="assets\libSys-images\BHIMUPI.png" alt="BHIM" width="80"
+                                height="40">
+                        </div>
+                    </div>
+                    <div class="row  ">
+                        <div class="col-md-7 offset-2">
+                            <input class="radio" type="radio" formControlName="rating" name="rating" value="F" />
+                            <label class="name">Your UPI ID</label>
+                            <div class="space"> <input class="ph affets" type="text" placeholder="Enter valid UPI ID">
+                            </div>
+                        </div>
+                        <div class="col-md-2 mt-0 text-center">
+                            <!-- <img src="https://www.bing.com/images/search?view=detailV2&ccid=eZvb56xj&id=557577AF6F701971848DC0335597442ECC90FBC7&thid=OIP.eZvb56xjmEhYl5WUTFM4BwHaCO&mediaurl=https%3a%2f%2fpaynormgateway.commdel.com%2fAssets%2fPaymentAssets%2fimages%2fupi-icon-black.png&exph=189&expw=629&q=upi+payment+icon&simid=608042759714246804&FORM=IRPRST&ck=B33A6BCE7491FFAEF7B6BE4D1AA21A5A&selectedIndex=11" alt=""> -->
+                            <!-- <img  class="img-responsive"  src="assets\libSys-images\BHIMUPI.png" alt="BHIM" width="80" height="40"> -->
+                            <button class="btn btn-theme">Verify</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

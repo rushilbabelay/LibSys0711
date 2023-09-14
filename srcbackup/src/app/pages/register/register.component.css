@@ -1,0 +1,134 @@
+.container {
+    text-align: left;
+    background-color: rgba(185, 214, 212, 0.5);
+    border-radius: 10px;
+    padding-top: 10px;
+}
+
+.imp {
+    color: red;
+}
+
+.form-label {
+    margin-bottom: 0;
+}
+
+.name {
+    display: flex;
+}
+
+.firstName_label {
+    width: 210px;
+}
+
+.lastName_label {
+    width: 200px;
+}
+
+.emailId_label {
+    width: 210px;
+}
+
+.emailId_input{
+    /* width: 40%; */
+}
+
+.password_label {
+    width: 210px;
+}
+
+.mobileNumber_label {
+    width: 210px;
+    
+}
+
+.DOB_label {
+    width: 210px;
+}
+
+.Address {
+    font-size: 17px;
+}
+
+/* .form-group[_ngcontent-bno-c8] {
+    margin-top: 0;
+}
+
+.form-group[_ngcontent-vsy-c8] {
+    margin-top: 0;
+} */
+
+/* .houseNo_label{
+ width: 300px;
+ padding-left: 0px;
+} */
+.building_label {
+    width: 210px;
+}
+
+/* .streetAddress_label {
+    width: 175px;
+    padding-left: 42px;
+} */
+/* .pincode_label{
+    width: 140px;
+} */
+/* .city_label{
+   
+} */
+.button {
+    /* padding: 30px; */
+}
+
+label {
+    font-size: 15px;
+    /* font-weight: bold; */
+}
+
+.form-control {
+    height: 30px;
+    /* margin-left: 10px; */
+}
+
+.form-control:focus {
+    box-shadow: 10px 0px 0px 0px var(--primary-color) !important;
+    border-color: rgba(149, 179, 215, 1);
+}
+
+.btn-theme {
+    height: 30px;
+    margin-bottom: 20px;
+    width: 100px;
+}
+
+.radio {
+    margin-left: 35px;
+}
+.radioOption{
+    padding-left: 5px;
+
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.alert,
+.text-danger,
+.text-success {
+    color: rgb(249, 5, 5);
+    font-style: bold;
+    font-size: 15px;
+}
+
+::placeholder {
+    /* font-style: italic; */
+    font-size: 14px;
+}
+
+/* ::date 
+{
+    font-style: italic;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.878);
+} */

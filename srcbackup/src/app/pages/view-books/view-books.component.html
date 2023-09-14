@@ -1,0 +1,64 @@
+<div *ngIf="commonLayout">
+    <app-common-layout></app-common-layout>
+  </div>
+  <div *ngIf="adminLayout">
+    <app-admin-layout></app-admin-layout>
+  </div>
+<div class="background">
+    <div>
+        <div class="myContent">
+            <div style="text-align:center;">
+                <h1>View Books</h1>
+                <br />
+                <div class="row">
+                    <div class="col-md-3" style="text-align:right">
+                        <label style="font-size: 20px;">Search :</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" placeholder="Book Name" (input)="searchBook(bookName.value)"
+                            class="form-control" #bookName />
+                    </div>
+                    <div class="col-md-2" style="text-align:right">
+                        <label style="font-size: 20px;">Filter books:</label>
+                    </div>
+                    <div class="col-md-2">
+                        <select class="form-control" #authordrop (change)="searchBookByAuthor(authordrop.value)">
+                            <option value="0">All Authors</option>
+                            <option *ngFor="let author of authors" value={{author.authorId}}>
+                                {{author.authorName}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="tableDiv">
+                    <div class="table-responsive mt-4">
+                        <table class="table" *ngIf="filteredbooks && filteredbooks.length">
+                            <tr class="table-head" style="background-color:none;">
+                                <th class="bookIdColumn">Book Id</th>
+                                <th class="bookNameColumn">Book Name</th>
+                                <!-- <th>Author Id</th> -->
+                                <th class="priceColumn">Price </th>
+                                <th>Quantity Available</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr *ngFor="let book of filteredbooks" style="background-color:none;">
+                                <td class="bookId">{{book.bookId}}</td>
+                                <td class="bookName">{{book.bookName}}</td>
+                                <!-- <td>{{book.authorId}}</td> -->
+                                <td class="price"><i class="fa fa-inr" ></i>{{book.price}}</td>
+                                <td class="quantityAvailable">{{book.quantityAvailable}}</td>
+                                <td class="actionColumn"><a routerLink="/bookDetails/{{book.bookId}}"
+                                        style="background-color: #E5F5EA; padding: 0%;">
+                                        <button class="btn btn-theme"> Buy Now</button></a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div *ngIf="showMsgDiv " style=>
+                    <h4 class="jumbotron " style="text-align:center;">No books available</h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

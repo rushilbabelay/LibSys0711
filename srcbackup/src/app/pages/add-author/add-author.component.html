@@ -1,0 +1,25 @@
+
+    <app-admin-layout></app-admin-layout>
+
+<br>
+<h1 class="text-center">Add New Author</h1>
+<form class="container" [formGroup]="addbookForm" (ngSubmit)="SubmitForm(addbookForm)">
+  <!-- <div class="form-group">
+
+      <label for="authorId">Author Id</label>
+
+      <input type="text" class="form-control" id="Authorid" aria-describedby="Authorid" placeholder="Enter Author Id">
+    </div>-->
+  <div class="form-group">
+    <label for="authorName">Name</label>
+    <input type="text" class="form-control" id="authorName" placeholder="Name of Author">
+  </div>
+
+
+
+  <div class="text-center" style="margin: 10px;">
+    <button type="submit" class="btn btn-theme" >Add Author </button>
+  </div>
+</form>
+<div class="text-right text-success"> {{msg}}</div>
+<div class="text-danger">{{msg1}}</div>

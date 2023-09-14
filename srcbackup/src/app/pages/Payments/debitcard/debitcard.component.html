@@ -1,0 +1,135 @@
+<div *ngIf="commonLayout">
+    <app-common-layout></app-common-layout>
+  </div>
+  <div *ngIf="adminLayout">
+    <app-admin-layout></app-admin-layout>
+  </div>
+<div class="row">
+    <div class="col-md-1 mt-4 offset-3 text-center">
+        <button routerLink="/types-of-payments" class="btn backButton">Back</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 offset-3">
+        <div class="padding ">
+            <div class="row">
+                <form class="container justify-content-center" [formGroup]="debitCard"
+                    (ngSubmit)="SubmitForm(debitCard)">
+                    <!-- (ngSubmit)="SubmitForm(creditcard)" -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-md-5 heading">
+                                    <span>CREDIT/DEBIT CARD PAYMENT</span>
+                                </div>
+                                <!-- <div class="col-md-6  text-right" style="margin-top: -5px;"> -->
+                                <div class="col-md-4 offset-3 " style="margin-top: -5px;">
+                                    <img src="https://img.icons8.com/color/36/000000/visa.png" alt="">
+                                    <img src="https://img.icons8.com/color/36/000000/mastercard.png" alt="">
+                                    <img src="https://img.icons8.com/color/36/000000/amex.png" alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card-body" style="height: auto">
+                            <div class="row">
+                                <div class="col-md-6 text_label">
+                                    <div class="form-group">
+                                        <label for="cardNumber" class="control-label">CARD NUMBER</label>
+                                        <input type="tel" id="cardNumber" class="input-lg form-control cardNumber "
+                                            formControlName="cardNumber" autocomplete="cardNumber"
+                                            placeholder="**** **** **** ****" name="">
+                                    </div>
+                                    <div class="form-text text-danger"
+                                        *ngIf="debitCard.controls['cardNumber'].errors?.['required'] && (debitCard.controls['cardNumber'].touched|| debitCard.controls['cardNumber'].dirty)">
+                                        Card Number is required.
+                                    </div>
+                                    <div class="form-text text-danger"
+                                        *ngIf="debitCard.controls['cardNumber'].errors?.['minlength'] && (debitCard.controls['cardNumber'].touched || debitCard.controls['cardNumber'].dirty)">
+                                        Minimum length contain 16 numbers
+                                    </div>
+                                    <div class="form-text text-danger"
+                                        *ngIf="debitCard.controls['cardNumber'].errors?.['maxlength'] && (debitCard.controls['cardNumber'].touched || debitCard.controls['cardNumber'].dirty)">
+                                        Maximun length contain 16 numbers
+                                    </div>
+                                    <div class="form-text text-danger"
+                                        *ngIf="debitCard.controls['cardNumber'].errors?.['pattern'] && (debitCard.controls['cardNumber'].touched || debitCard.controls['cardNumber'].dirty)">
+                                        Aplhabets and Special Characters are not valid
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 text_label">
+                                    <div class="form-group">
+                                        <label for="expiryDate" class="control-label">CARD EXPIRY</label>
+                                        <input type="date" id="expiryDate" class="input-lg form-control expiryDate"
+                                            formControlName="expiryDate" autocomplete="expiryDate" placeholder="** / **"
+                                            name="">
+                                        <div *ngIf="debitCard.controls['expiryDate'].errors?.['required'] && debitCard.controls['expiryDate'].touched"
+                                            class="form-text text-danger">
+                                            Please Choose the Date</div>
+                                        <div *ngIf="debitCard.controls['expiryDate'].errors?.['dateError'] && debitCard.controls['expiryDate'].dirty"
+                                            class="form-text text-danger">
+                                            {{debitCard.controls['expiryDate'].errors?.['dateError'].message}}</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text_label">
+                                    <div class="form-group">
+                                        <label for="cvvNumber" class="control-label">CARD CVV</label>
+                                        <input type="tel" id="cvvNumber" class="input-lg form-control cvvNumber"
+                                            formControlName="cvvNumber" autocomplete="off" placeholder="***" name="">
+                                        <div class="form-text text-danger"
+                                            *ngIf="debitCard.controls['cvvNumber'].errors?.['required'] && (debitCard.controls['cvvNumber'].touched|| debitCard.controls['cvvNumber'].dirty)">
+                                            CVV number is required.
+                                        </div>
+                                        <div class="form-text text-danger"
+                                            *ngIf="debitCard.controls['cvvNumber'].errors?.['minlength'] && (debitCard.controls['cvvNumber'].touched || debitCard.controls['cvvNumber'].dirty)">
+                                            Minimum length contain 3 numbers
+                                        </div>
+                                        <div class="form-text text-danger"
+                                            *ngIf="debitCard.controls['cvvNumber'].errors?.['maxlength'] && (debitCard.controls['cvvNumber'].touched || debitCard.controls['cvvNumber'].dirty)">
+                                            Maximun length contain 3 numbers
+                                        </div>
+                                        <div class="form-text text-danger"
+                                            *ngIf="debitCard.controls['cvvNumber'].errors?.['pattern'] && (debitCard.controls['cvvNumber'].touched || debitCard.controls['cvvNumber'].dirty)">
+                                            Aplhabets and Special Characters are not valid
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8 text_label">
+                                    <div class="form-group">
+                                        <label for="nameOnCard" class="control-label">CARD HOLDER NAME</label>
+                                        <input type="text" class="input-lg form-control" formControlName="nameOnCard"
+                                            placeholder="Enter card holder name">
+                                        <div class="form-text text-danger"
+                                            *ngIf="debitCard.controls['nameOnCard'].errors?.['required'] && (debitCard.controls['nameOnCard'].touched|| debitCard.controls['nameOnCard'].dirty)">
+                                            Name is required.
+                                        </div>
+                                        <div class="form-text text-danger"
+                                            *ngIf="debitCard.controls['nameOnCard'].errors?.['pattern'] && (debitCard.controls['nameOnCard'].touched|| debitCard.controls['nameOnCard'].dirty)">
+                                            Numbers and Special Characters are not valid
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5 offset-3">
+                                    <!-- <input type="button" value="MAKE PAYMENT" class="btn btn-theme btn-lg form-control"
+                                style="font: size 0.8em;"> -->
+                                    <button type="submit" value="MAKE PAYMENT" class="btn">MAKE PAYMENT</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="text-success"> {{msg}}</div>
+                <div class="text-danger">{{msg1}}</div>
+            </div>
+        </div>
+    </div>
+</div>

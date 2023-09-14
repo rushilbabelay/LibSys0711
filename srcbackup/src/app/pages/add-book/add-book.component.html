@@ -1,0 +1,41 @@
+<app-admin-layout></app-admin-layout>
+
+<br>
+<h1 class="text-center">Add New Book</h1>
+<form class="container" [formGroup]="addbookForm" (ngSubmit)="submitAddBook(addbookForm)">
+  <!-- <div class="form-group">
+      <label for="bookId">Book Id</label>
+
+      <input type="text" class="form-control" id="Bookid" aria-describedby="Bookid" placeholder="Enter Book Id">
+    </div>
+
+  <small *ngIf="addbookForm.controls['Bookid'].errors?.['required'] &&  addbookForm.controls['Bookid']
+  .touched" class="text-danger">Book ID is required!</small>
+  -->
+  <div class="form-group">
+    <label for="bookName">Book Title</label>
+    <input type="text" class="form-control" formControlName="bookName" id="bookName" placeholder="Title of book">
+  </div>
+  <!-- <div class="form-group">
+    <label for="authorId">Author Id</label>
+    <input type="number" class="form-control" id="authorId" placeholder="Author Id">
+  </div> -->
+  <div class="form-group">
+    <label for="Quantity">Available</label>
+    <input type="number" class="form-control" formControlName="quantity" id="quantity" placeholder="Quantity">
+  </div>
+  <div class="form-group">
+    <label for="Price">Price</label>
+    <input type="number" class="form-control" formControlName="price" id="price" placeholder="Price">
+  </div>
+
+  <div class="text-center">
+    <button type="submit" class="btn btn-theme">Add Book</button>
+  </div>
+  <div *ngIf="showDiv" style="color:red;text-align:center;">
+    <br />
+    {{msg}}
+  </div>
+</form>
+<div class="text-right text-success"> {{msg}}</div>
+<div class="text-danger">{{msg1}}</div>

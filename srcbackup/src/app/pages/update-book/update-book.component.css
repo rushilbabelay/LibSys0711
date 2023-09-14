@@ -1,0 +1,53 @@
+.table{
+  /* padding-left: 32%;*/
+ 
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: fit-content;
+  border-color:var(--secondary-color); 
+  border-style:solid;
+  border-width: 0.5px;
+  
+  border-radius: 25px;
+  overflow: hidden;
+  
+  
+ 
+  
+ 
+  
+  /* padding-top: 0.4%;
+ */
+   border-color: rgba(2,100,103,255);
+   
+ }
+ .btn-primary{
+   background-color: rgba(2,100,103,255);
+ }
+ 
+ 
+ .btn-danger{
+   background-color: rgb(32, 16, 16);
+ 
+ 
+ }
+ .ttl{
+   text-align: left;
+ }
+ .form-grp{
+ text-align: left;
+ }
+ .btn-theme {
+   height: 35px;
+   border: none;
+   font-size: 14px;
+   background-color: var(--primary-color);
+   color: var(--secondary-color);
+   margin-bottom: 15px;
+ }
+ .action{
+   margin-left: 10px;
+ }
+ 

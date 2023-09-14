@@ -1,0 +1,51 @@
+<!-- <div class="container">
+    <h1>Book Details</h1>
+    <div class=" ">
+        <div class="bookBox row ">
+            
+            <div class="bookImg col-lg-6 shadow-effect " *ngIf="bookData">
+                <img src="{{bookData[0].bookImg}}" width="100%">
+            </div>
+            <div class="bookDetails col-lg-6 shadow-effect">
+                <p class="name">
+                   {{bookData[0].bookName}}
+                </p>
+                <div class="list ">
+                    <li> <b> Price : </b><i class="fa fa-inr"></i>{{bookData[0].price}}</li>
+                    <li> <b> Available Books :</b> {{bookData[0].quantityAvailable}}</li>
+                
+                </div>
+                <button class="btn btn-theme mt-5">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div *ngIf="commonLayout">
+    <app-common-layout></app-common-layout>
+  </div>
+  <div *ngIf="adminLayout">
+    <app-admin-layout></app-admin-layout>
+  </div>
+<div class="container justify-content-center">
+    <h1>Book Details</h1>
+    <div class="allDetails row justify-content-center">
+        <div class="bookImg col-lg-6 shadow-effect " *ngIf="bookData">
+            <img src="{{bookData[0].bookImg}}" width="100%">
+        </div>
+        <div class="bookDetails col-lg-6 shadow-effect">
+            <p class="name">
+               {{bookData[0].bookName}}
+            </p>
+            <div class="list mt-4 ">
+                <p> <b> Price : </b><i class="fa fa-inr"></i>{{bookData[0].price}}</p>
+                <p> <b> Available Books :</b> {{bookData[0].quantityAvailable}}</p>
+            
+            </div>
+            <div class="buttons">
+                <!-- <button class="btn btn-theme mt-5">Add To Cart</button> -->
+                <button class="btn btn-theme mt-5 ">Buy Now</button>
+            </div>
+            
+        </div>
+    </div>
+</div>

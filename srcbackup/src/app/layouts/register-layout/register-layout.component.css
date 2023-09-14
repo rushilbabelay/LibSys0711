@@ -1,0 +1,12 @@
+.navbar-brand {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.nav-link {
+    color: var(--secondary-color);
+}
+
+li {
+    font-size: large;
+}

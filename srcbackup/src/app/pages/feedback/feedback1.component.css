@@ -1,0 +1,87 @@
+.container {
+    text-align: left;
+    background-color: rgba(185, 214, 212, 0.5);
+    padding-top: 10px;
+    border-radius: 10px;
+}
+
+.imp {
+    color: red;
+}
+
+.my_row {
+    margin: 10px;
+}
+
+.name {
+    display: flex;
+}
+
+.name_label {
+    width: 80px;
+}
+
+.emailId_label {
+    width: 80px;
+}
+
+label {
+    font-size: 15px;
+}
+
+.form-control:focus {
+    box-shadow: 10px 0px 0px 0px var(--primary-color) !important;
+    border-color: rgba(149, 179, 215, 1);
+}
+
+.radioOption {
+    padding-left: 5px;
+}
+
+.btn-theme {
+    height: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.radio {
+    margin-left: 14px;
+    font-weight: 200px;
+}
+
+/* .options{
+    
+} */
+
+.form-group {
+    margin-top: 12px;
+}
+
+.input {
+    height: 30px;
+    width: 200px;
+}
+
+.alert,
+.text-danger,
+.text-success {
+    /* color: rgb(249, 5, 5); */
+    font-style: bold;
+    font-size: 15px;
+}
+
+::placeholder {
+    /* font-style: italic; */
+    font-size: 14px;
+}
+
+.space {
+    padding-bottom: 5px;
+}
+
+/* ::date 
+{
+    font-style: italic;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.878);
+} */

@@ -1,0 +1,36 @@
+.container {
+  text-align: left;
+  background-color: rgba(185, 214, 212, 0.5);
+  padding-top: 15px;
+  width: 400px;
+  border-radius: 25px;
+  border-color: black;
+}
+
+.btn-theme {
+  height: 35px;
+  border: none;
+  font-size: 14px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  
+}
+
+
+.form-group {
+  margin-top: 15px;
+}
+
+.alert,
+.text-danger,
+.text-success {
+  color: rgb(249, 5, 5);
+  font-style: bold;
+  font-size: 12px;
+}
+
+
+::placeholder {
+  font-size: 12px;
+}

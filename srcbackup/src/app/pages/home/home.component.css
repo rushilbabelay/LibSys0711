@@ -1,0 +1,64 @@
+.carousel-inner img {
+    /* width: 100%; */
+    height: 330px;
+}
+
+.carousel-control-prev-icon {
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.carousel-control-next-icon {
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    border-radius: 50%;
+    /* padding: 30px; */
+}
+
+.carousel-item {
+    height: 300px;
+}
+
+.row {
+    padding: 20px 20px;
+}
+
+.card {
+    width: 270px;
+    height: 410px;
+    padding: 10px 10px;
+}
+
+.bookBox {
+    padding: 10px 5px;
+}
+
+.bookBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.zoom {
+    transition: transform .2s;
+    /* Animation */
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+/* -----KKKC */
+
+.navIcons {
+    padding: 15px;
+    width: 70px;
+    background-color: black;
+    border-radius: 50%;
+}

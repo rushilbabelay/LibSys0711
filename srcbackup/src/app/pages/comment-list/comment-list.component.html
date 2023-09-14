@@ -1,0 +1,30 @@
+<!-- <div class="card mt-5 mb-5 pb-5 shadow-effect" style="text-align:left">
+    <div class="card-body">
+        <h4 class="mt-3 mb-3">Comments(1,256)</h4>
+        <div class="comment-box mt-3">
+            <h6 class="mb-0">John Doe</h6>
+            <small class="text-danger">Last Updated - Mar 2 , 2023</small>
+            <div class="mt-3 mb-3">
+                I Need The Secret Story Book
+            </div>
+            <a href="" class="mt-1">Reply</a>
+            <a href="" class="mt-1 ml-3">View reply</a>
+            <hr>
+        </div>
+    </div>
+</div> -->
+<!-- vvssdfds -->
+<div class="col-md-6 offset-3 mt-2">
+    <div class="card-body">
+        <h4 class="mt-4 mb-3">Comments</h4>
+        <div class="container">
+            <div class="comment" *ngFor="let comment of viewcomments">
+                <div class="commentorName">{{comment.Name}}</div>
+                <div class="left_gap">
+                    <div class="commentorRating">{{comment.Rating}}</div>
+                    <div class="commentorComment">{{comment.Suggestions}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

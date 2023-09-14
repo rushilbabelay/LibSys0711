@@ -1,0 +1,8 @@
+.container{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100% ;
+}
+.app-body{
+    /* min-height: 65vh; */
+}

@@ -1,0 +1,90 @@
+<app-admin-layout></app-admin-layout>
+<br>
+<h1 class="text-center">Update Book Details</h1>
+<div class="table">
+    <tbody class = "tbody">
+        <tr><th style="margin: 10px;" >Book Id</th>
+           <th class="ttl">Title</th> 
+            <th style="margin: 10px; text-align: left;" >Price</th>
+            <th>Quantity Available</th>
+            
+        <th>Action</th></tr>
+        <tr *ngFor="let book of books">
+            <td style="margin: 10px;" > {{book.bookId}} </td>
+            <td align="left"> {{book.bookName}} </td>
+        
+            <td align="right" style="margin: 10px; text-align: left;" > &#8377;  {{book.price}} </td>
+            <td> {{book.quantityAvailable}} </td>
+            
+            <td align="right"  class="action" >
+               <button type="button" class = "btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="update(book)" style="padding-left: 18px; padding-right: 18px;"> Edit</button>
+          <!--  <td> <button type="button" class="btn btn-danger" (click)="deleteBooks(book)" >Delete</button></td>-->
+      
+          &nbsp;
+          <button type="button" class="btn btn-danger"data-bs-toggle="modal" data-bs-target="#deleteModal" style="margin-left: 3px;">Delete</button></td>
+        
+        </tr>
+    </tbody>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Update Book Details </h1>
+              
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-grp">
+                        <label for="Bookid"  > Book Id</label>
+                        <br>
+                        <input type="text" #name [(ngModel)]="bookToUpdate.bookId"  name = "Bookid" id="bookId" class="form-control" ><br>
+            
+                        <label for="BookName"> Book Title</label>
+                        <br>
+                        <input type="text" #bookName [(ngModel)]="bookToUpdate.bookName" name = "BookName" id="bookName" class="form-control"><br>
+            
+                       
+            
+                        <label for="Quantity">Quantity Available </label>
+                        <br>
+                        <input type="number" #quantity [(ngModel)]="bookToUpdate.quantityAvailable"  name = "Quantity" id="quantity" class="form-control"><br>
+            
+                        <label for="Price">Price</label>
+                        <br>
+                        <input type="number" #price [(ngModel)]="bookToUpdate.price"  name = "Price" id="price" class="form-control">
+            
+                        <br>
+                       
+            
+                    </div>
+                    <pre></pre>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"  style="margin-bottom: 14px; padding-left: 15px; padding-top: 4px;">Close</button>
+                    &nbsp;
+              <button type="button" class="btn btn-theme" >Save changes</button>
+                </form>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    
+    
+      <!--deleteModal-->
+      <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Book</h1>
+              <button type="button" class="btn-primary" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Are you sure you want to delete the selected book?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal" style="margin-bottom: 14px; padding-left: 15px; padding-top: 4px;">Close</button>
+              <button type="button" class="btn btn-theme">Yes, Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>

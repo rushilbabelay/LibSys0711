@@ -1,0 +1,98 @@
+.container {
+    /* border:solid rgb(250, 235, 245) 2px ;  */
+
+    /* color: white; */
+    text-align: left;
+    background-color: rgba(185, 214, 212, 0.5);
+    /* opacity: 100%; */
+    /* padding: 40px; */
+    padding-top: 10px;
+    border-radius: 10px;
+    /* border-color: black; */
+    /* margin: 20px; */
+    padding-bottom: 20px;
+
+}
+
+
+
+.imp{
+    color: red;
+  }
+.padding{
+    padding-top: 2rem;
+}
+.name{
+    /* display: flex; */
+    width: 280px;
+}
+/* .loginID_label{
+   width: 148px; 
+}
+.password_label{
+    width: 130px;
+} */
+label {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+
+}
+.buttons{
+    padding-top: 20px;
+}
+
+.btn-theme {
+    height: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.radio {
+    margin-left: 14px;
+    
+}
+/* .options{
+    
+} */
+
+.form-control:focus {
+    box-shadow: 10px 0px 0px 0px var(--primary-color)!important;
+    border-color: rgba(149,179,215,1);
+
+}
+/* .a{
+    display: flex;
+} */
+.form-group {
+    margin-top: 12px;
+}
+.input{
+    height: 30px;
+    /* margin-left: 10px; */
+}
+
+.alert,
+.text-danger,
+.text-success {
+    /* color: rgb(249, 5, 5); */
+    font-style: bold;
+    font-size: 15px;
+}
+
+::placeholder {
+    /* font-style: italic; */
+    font-size: 14px;
+}
+
+.space {
+    padding-bottom: 5px;
+}
+
+
+/* ::date 
+{
+    font-style: italic;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.878);
+} */

@@ -1,0 +1,103 @@
+<div *ngIf="commonLayout">
+  <app-common-layout></app-common-layout>
+</div>
+<div *ngIf="adminLayout">
+  <app-admin-layout></app-admin-layout>
+</div>
+<div class="table-responsive">
+    <div class="col-md-6 offset-3 mt-2">
+        <div class="card-body">
+            <h1 class="text-center">Feedback Form</h1>
+            <!-- <h5 class="text-center"><em><b>If you have any suggestion or any feedbackForm for us, we'd love to hear for it</b></em></h5> -->
+            <form class="container" [formGroup]="feedbackForm" (ngSubmit)="submitFeedbackForm(feedbackForm)">
+              <div class="row my_row">
+                <div class="row">
+                  <div class="col-md-9 form-group">
+                    <div class="name">
+                      <label class="name_label">Name :<label class="imp">*</label></label>
+                      <input type="text" class="input form-control " formControlName="name"
+                             placeholder="Enter Your Full Name">
+                    </div>
+                    <div class="form-text text-danger"
+                         *ngIf="feedbackForm.controls['name'].errors?.['required'] && (feedbackForm.controls['name'].touched|| feedbackForm.controls['name'].dirty)">
+                      Name is required.
+                    </div>
+                    <div class="form-text text-danger"
+                         *ngIf="feedbackForm.controls['name'].errors?.['minlength'] && (feedbackForm.controls['name'].touched || feedbackForm.controls['name'].dirty)">
+                      Name is too short. Atleast 2 characters
+                    </div>
+                    <div class="form-text text-danger"
+                         *ngIf="feedbackForm.controls['name'].errors?.['pattern'] && (feedbackForm.controls['name'].touched || feedbackForm.controls['name'].dirty)">
+                      Name should start with Alphabet.
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-9 form-group">
+                    <div class="name">
+                      <label class=" emailId_label">Email Id :<label class="imp">*</label></label>
+                      <input type="text" class=" input form-control " formControlName="emailId"
+                             placeholder="Enter email id">
+                    </div>
+                    <div *ngIf="feedbackForm.controls['emailId'].errors?.['required'] && feedbackForm.controls['emailId'].touched"
+                         class="form-text text-danger ">EmailId is required!</div>
+                    <!-- <div *ngIf="feedbackForm.controls['emailId'].errors?.['pattern'] && feedbackForm.controls['emailId'].touched"
+                         class="form-text text-danger">The EmailId is not proper!</div> -->
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <label>
+                      Please provide your feedback on the quality of our service :<label class="imp">*</label>
+                    </label>
+                  </div>
+                </div>
+                <div class="options">
+                  <input class="radio" id="Excellent" type="radio" formControlName="rating" name="rating" value="Excellent" />
+                  <label for="Excellent" class="radioOption">Excellent</label>
+                  <input class="radio" id="Very Good" type="radio" formControlName="rating" name="rating" value="Very Good" />
+                  <label for="Very Good" class="radioOption">Very Good</label>
+                  <input class="radio" id="Good" type="radio" formControlName="rating" name="rating" value="Good" />
+                  <label for="Good" class="radioOption">Good</label>
+                  <input class="radio" id="Average" type="radio" formControlName="rating" name="rating" value="Average" />
+                  <label for="Average" class="radioOption">Average</label>
+                  <input class="radio" id="Poor" type="radio" formControlName="rating" name="rating" value="Poor" />
+                  <label for="Poor" class="radioOption">Poor</label>
+                  </div>
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <label class="space">
+                      Do you have suggestions on what we can do to provide you with a better
+                      service?<label class="imp">*</label>
+                    </label>
+                    <br>
+                    <textarea col="10" rows="5" class="form-control shadow-effect" formControlName="feedback"
+                              placeholder="Enter Your feedback here........."></textarea>
+                    <!-- <input type="text" class="form-control" formControlName="feedbackForm"> -->
+                    <div *ngIf="feedbackForm.controls['feedback'].errors?.['required'] && feedbackForm.controls['feedback'].touched"
+                         class="form-text text-danger ">This field is required!</div>
+                    <div *ngIf="feedbackForm.controls['feedback'].errors?.['maxlength']"
+                         class="form-text text-danger">
+                      Message must
+                      be atmost 200 characters long
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 offset-4 text-center  ">
+                    <!-- <button type="submit" class="button"> Submit</button> -->
+                    <button type="submit" class="btn btn-theme">Submit</button>
+                  </div>
+                </div>
+              </div>
+              <!--<div *ngIf="showDiv" style="color:red;text-align:center;">
+                <br />
+                {{msg}}
+              </div>-->
+            </form>
+        </div>
+        <div class="text-success">{{msg}}</div>
+        <div class="text-danger">{{msg1}}</div>
+    </div>
+    <app-comment-list></app-comment-list>
+</div>

@@ -1,0 +1,27 @@
+.container {
+    text-align: left;
+    background-color: rgba(185, 214, 212, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.comment {
+    margin-bottom: 16px;
+}
+
+.commentorName {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.left_gap{
+    margin-left: 10px;
+}
+.commentorRating {
+    font-weight: 500;
+    color: rgb(116, 136, 70);
+}
+.commentorComment{
+    line-height: 1.2;
+}
+

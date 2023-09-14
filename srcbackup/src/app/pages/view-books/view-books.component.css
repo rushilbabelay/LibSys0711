@@ -1,0 +1,102 @@
+.tableDiv {
+    display: flex;
+}
+
+.table-responsive {
+    margin: auto;
+}
+
+.table-head {
+    background-color: rgba(185, 214, 212, 0.7);
+}
+
+.table {
+    color: var(--body-text-color);
+    background-color: var(--secondary-color);
+    border: 5px solid rgba(220, 230, 242, 1);
+    width: 70vw;
+}
+
+.searchFilter {
+    /* width: 1000px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 10px;
+}
+
+.searchBookDiv {
+    display: flex;
+}
+
+.myContent {
+    background-size: cover;
+}
+
+.bookName {
+    text-align: left;
+}
+
+.price,
+.quantityAvailable {
+    text-align: left;
+
+}
+
+
+.bookIdColumn {
+    /* width: 100px; */
+    /* text-align: left; */
+}
+
+.bookNameColumn ,
+.bookName
+{
+    /* width: 300px; */
+    text-align: left;
+    /* margin-left: 20px; */
+    padding-left: 60px;
+}
+
+.priceColumn {
+    /* width: 100px; */
+    text-align: left;
+    padding-left: 10px;;
+
+}
+
+.quantityAvailable {
+    /* width: 100px; */
+    text-align: center;
+}
+
+.actionColumn {
+    /* width: 100px; */
+}
+
+.jumbotron {
+    color: var(--body-text-color);
+    background-color: rgba(0, 0, 0);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* .button {
+    height: 35px;
+    border: none;
+    font-size: 13px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+} */
+
+.btn-theme {
+    height: 30px;
+    width: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.fa 
+{
+ background-color: rgba(0, 0, 0, 0);
+ color: var(--primary-color);
+}

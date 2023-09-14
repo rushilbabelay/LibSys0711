@@ -1,0 +1,63 @@
+<div *ngIf="commonLayout">
+    <app-common-layout></app-common-layout>
+  </div>
+  <div *ngIf="adminLayout">
+    <app-admin-layout></app-admin-layout>
+  </div>
+<div class="table-responsive">
+    <div class="row">
+        <div class="col-md-3 offset-0 ">
+            <app-types-of-payments></app-types-of-payments>
+        </div>
+        <div class="col-md-5 offset-1 mt-2">
+            <div class="card-body">
+                <h1 class="text-center">Internet Banking</h1>
+                <div class="padding">
+                    <form class="container" [formGroup]="login" (ngSubmit)="SubmitForm(login)">
+                        <!-- <form action="" class="container"> -->
+                        <!-- <div class="row my_row"> -->
+                        <div class="row">
+                            <div class="col-md-7 offset-2 form-group">
+                                <div class="name">
+                                    <label class="loginID_label">Login ID :<label class="imp">*</label></label>
+                                    <input type="text" class="input form-control " formControlName="loginId"
+                                        placeholder="Enter Login ID">
+                                </div>
+                                <div *ngIf="login.controls['loginId'].errors?.['required'] && (login.controls['loginId'].touched|| login.controls['loginId'].dirty)"
+                                    class="form-text text-danger"> Login ID is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-9 offset-2  form-group">
+                                <div class="name">
+                                    <label class=" password_label">Password :<label class="imp">*</label></label>
+                                    <input type="password" class=" input form-control " formControlName="password"
+                                        placeholder="Enter Password">
+                                </div>
+                                <div *ngIf="login.controls['password'].errors?.['required'] && (login.controls['password'].touched|| login.controls['password'].dirty)"
+                                    class="form-text text-danger ">Password is required!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row buttons">
+                            <div class="col-md-4 offset-2  text-center  ">
+                                <!-- <button type="submit" class="button"> Submit</button> -->
+                                <button type="submit" class="btn btn-theme">LOGIN</button>
+                            </div>
+                            <div class="col-md-4 offset-0 text-center  ">
+                                <!-- <button type="submit" class="button"> Submit</button> -->
+                                <!-- <button routerLink="/netbanking" class="btn backButton">Back</button> -->
+
+                                <button routerLink="/resetPassword" class="btn btn-theme">RESET</button>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                    </form>
+                </div>
+            </div>
+            <div class="text-success"> {{msg}}</div>
+            <div class="text-danger">{{msg1}}</div>
+        </div>
+    </div>
+</div>

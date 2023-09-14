@@ -1,0 +1,53 @@
+.table-responsive {
+    padding: 35px;
+}
+
+th {
+    padding-top: 10px;
+}
+
+td {
+    padding: 5px;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+.padding {
+    padding-left: 30px;
+}
+
+.bookName {
+    padding-left: 30px;
+    /* font-size: 20px; */
+}
+
+.qp {
+    padding-right: 20px;
+}
+
+.table {
+    color: var(--body-text-color);
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+.myContent {
+    background-size: cover;
+    padding: 0;
+    margin: auto;
+    /* margin-top: 200px; */
+    width: 80%;
+}
+
+.table-head {
+    background-color: rgba(185, 214, 212, 0.7);
+    border-radius: 50%;
+}
+.jumbotron {
+    color: var(--body-text-color);
+    background-color: rgba(0, 0, 0);
+    margin-left: 10px;
+    margin-right: 10px;
+}
